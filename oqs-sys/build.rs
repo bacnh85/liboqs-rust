@@ -102,6 +102,9 @@ fn main() {
     } else {
         config.define("OQS_USE_OPENSSL", "No");
     }
+
+    config.define("OQS_PERMIT_UNSUPPORTED_ARCHITECTURE", "ON");
+
     let outdir = config.build_target("oqs").build();
 
     // lib is put into $outdir/build/lib
